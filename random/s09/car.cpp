@@ -8,7 +8,10 @@ class Car{
      string brand;
 
     public:
-     Car (string b, int y) : brand(b), year(y){}
+     Car (const string& brand, int year) {
+        this->brand = brand;
+        this->year = year;
+     }
      void display(){
         cout << "Brand: " << this->brand << ", year: " << this->year;
      };
@@ -18,5 +21,6 @@ int main(){
     Car myCar("Honda", 2015);
     Car myCar2("Toyota", 2020);
     myCar.display();
+    cout << endl;
     myCar2.display();
 }
